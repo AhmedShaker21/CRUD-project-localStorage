@@ -1,0 +1,136 @@
+@font-face {
+    font-family: 'Pacifico';
+    src: url("../webfonts/Pacifico-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'BreeSerif';
+    src: url("../webfonts/BreeSerif-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+:root{
+    --main-color:#fec260;
+}
+
+::-moz-selection{
+    background: var(--main-color);
+}
+
+::selection{
+    background: var(--main-color);
+}
+.dotted{
+    border-bottom: 2px dotted #000000;
+
+}
+section{
+    background-color: #F7ECDE;
+    .containerBody{
+        .gradient{
+            font-weight: bolder;
+            background-image: -webkit-gradient(linear, left top, right top, from(#3ca55c), to(#918933));
+            background-image: -o-linear-gradient(left, #3ca55c, #918933);
+            background-image: linear-gradient(to right, #3ca55c, #918933);
+            -webkit-background-clip: text;
+                    background-clip: text;
+            color: transparent;
+                }
+        .form-container{
+            .btn-container{
+                background-color: #D1512D ;
+                color: white;
+                &:hover{
+                    background-color: #A83F20;
+                }
+                &:active{
+                    background-color: transparent;
+                    color: #000000;
+                }
+            }
+        }
+    }
+    .table #tableContent {
+        .visit{
+            background-color: #9EB23B;
+            color: white;
+            &:hover{
+                background-color: #859831;
+            }
+            &:active{
+                background-color: transparent;
+                color: #000000;
+            }
+        }
+        .delete{
+            background-color: #ea1d36;
+            color: white;
+            &:hover{
+                background-color: #c11f32;
+            }
+            &:active{
+                background-color: transparent;
+                color: #000000;
+            }
+        }
+    }
+    .bookMarker {
+        font-family: "Pacifico";
+        font-size: 50px;
+        position: relative;
+        width: 16rem;
+        z-index: 99;
+    }
+    
+    .bookMarker::after {
+        content: "";
+        position: absolute;
+        left: 5px;
+        width: 100%;
+        height: 30%;
+        bottom: 0;
+        background-color: var(--main-color);
+        z-index: -1;
+        -webkit-transition: 0.4s;
+        -o-transition: 0.4s;
+        transition: 0.4s;
+    
+    }
+    
+    .bookMarker:hover::after {
+        height: 70%;
+    }
+    .form-control:focus{
+        border-color: var(--main-color);
+        -webkit-box-shadow: 0 0 0 0.25rem #fec26055;
+                box-shadow: 0 0 0 0.25rem #fec26055;
+    
+    }
+.alert-checker{
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#0000007e));
+    background-image: -o-linear-gradient(#0000007e 0% 100%);
+    background-image: linear-gradient(#0000007e 0% 100%);
+    .alert-container{
+        background-color: white;
+        padding: 24px;
+        width: 31.25rem;
+        p{
+            line-height: 25px;
+            font-family: "BreeSerif";
+            font-size: 20px;
+        }
+        ul{
+            list-style-type: none;
+            padding-left: 12px;
+        }
+        
+    }
+
+}
+
+}

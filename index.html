@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <link rel="shortcut icon" href="images/bookmark.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+  <section class="min-vh-100 position-relative">
+    <div class="containerBody py-5 w-75 m-auto">
+        <div class="containerBook position-relative text-center mx-auto">
+            <h2 class="bookMarker mx-auto">
+                Bookmarker
+            </h2>
+        </div>
+        <div class="dotted mt-4 py-4">
+        </div>
+        <div class="d-flex"> 
+            <h3 class="m-auto mt-4 gradient">
+                <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites 
+                <i class="fa-solid fa-bookmark"></i></h3>  
+        </div>
+        <div class="form-container mt-5 d-grid">
+            <div class="mb-3">
+                <label for="siteName" class="form-label fw-bold">
+                  <i class="fa-solid fa-book-bookmark "></i>
+                  Site Name</label>
+                <input oninput="validateInput(this)" type="text" placeholder="Bookmark Name" class="form-control" id="siteName" aria-describedby="emailHelp">
+              </div>
+              <div class="mb-3">
+                <label for="websiteURL" class="form-label fw-bold">
+                    <i class="fa-solid fa-link"></i>
+                    Site URL</label>
+                <input oninput="validateInput(this)" type="email" class="form-control"  placeholder="Website URL" id="websiteURL">
+              </div>
+              <button type="submit" onclick="addBookMarker()" class="m-auto btn btn-container mt-4 px-5">Submit</button>
+        </div>
+        <div class="dotted mt-4">
+        </div>
+        <table class="table mt-4 text-center bg-light">
+            <thead>
+              <tr>
+                <th class="text-capitalize">index</th>
+                <th class="text-capitalize">Website Name</th>
+                <th class="text-capitalize">Visit</th>
+                <th class="text-capitalize">Delete</th>
+              </tr>
+            </thead>
+            <tbody id="tableContent">
+
+            </tbody>
+          </table>
+    </div>
+    <!-----------------Alert----------------------------->
+    <div onclick="hideAlert()" class="d-none alert-checker w-100 d-flex justify-content-center align-items-center" role="alert" id="alert">
+      <div class=" alert-container rounded .w-500">
+        <div class="d-flex justify-content-between pb-4">
+          <div class="icons pt-2">
+            <i class="fa-solid fa-circle fs-5 text-danger"></i>
+            <i class="fa-solid fa-circle fs-5 text-warning"></i>
+            <i class="fa-solid fa-circle fs-5 text-success"></i>
+                  </div>
+          <div onclick="hideAlert()" class="fs-3 pe-3">
+                <a class="text-black" href="#"><i class="fa-solid fa-xmark"></i></a>
+                  </div>
+        </div>
+        <p class="fs-5 fw-medium">
+          Site Name or Url is not valid, Please follow the rules below :
+        </p>
+        <ul>
+          <li class="mb-3">
+            <i class="fa-regular fa-circle-right text-danger"></i> 
+            <span class="fs-5">Site name must contain
+              at least 3 characters</span>
+          </li>
+          <li>
+            <i class="fa-regular fa-circle-right text-danger"></i> 
+            <span class="fs-5">
+              Site URL must be a
+              valid one 
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+    <script src="js/main.js">
+    </script>
+</body>
+
+</html>
